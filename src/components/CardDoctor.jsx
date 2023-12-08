@@ -6,21 +6,16 @@ import Addmodal from "../components/Addmodal"
 
 const CardDoctor = ({data}) => {
 
-  const[selectedDoctor, setSelectedDoctor] = useState(null)
+  const [show, setShow] = useState(false);
+  const{id,name,dep,img} = data;
 
-  // console.log(data);
-  const{id,name,dep,img} = data
-
-  const handleModal = (data) => {
-    setSelectedDoctor(data)
-    // console.log(data);
-  }
-  console.log(selectedDoctor);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
     <div>
     <Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" src={img} onClick={()=>handleModal(data)}/>
+    <Card.Img variant="top" src={img} onClick={handleShow}/>
     <Card.Body className='text-center'>
       <Card.Title>{name}</Card.Title>
       <Card.Text>
@@ -28,7 +23,7 @@ const CardDoctor = ({data}) => {
       </Card.Text>
     </Card.Body>
   </Card>
-  {selectedDoctor && <Addmodal/>}
+  {show && <Addmodal handleClose={handleClose} handleShow={handleShow} show={show} name={name}/>}
   </div>
   )
 }
