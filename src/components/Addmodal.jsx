@@ -8,6 +8,7 @@ const Addmodal = ({handleClose, show, name}) => {
 
   return (
     <div>
+        
           {/* <Button variant="primary" onClick={handleShow}>
         Launch demo modal
       </Button> */}
@@ -29,5 +30,6 @@ const Addmodal = ({handleClose, show, name}) => {
     </div>
   )
 }
+
 
 export default Addmodal
