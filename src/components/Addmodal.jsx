@@ -7,12 +7,7 @@ const Addmodal = ({handleClose, show, name}) => {
 
   return (
     <div>
-
-          {/* <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button> */}
-
-       
+    
           {/* <Button variant="primary" onClick={handleShow}>
         Launch demo modal
       </Button> */}
